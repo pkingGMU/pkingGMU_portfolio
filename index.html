@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css?ver0.0.1">
+    <script src="main.js"></script>
     <title>Patrick King's Portfolio</title>
 </head>
 <body>
     <nav>
-        <div class="top-menu-buttons">
-            <button class="'btn" onclick="toggleMenu()">
-                <rect class="'st0" width="'16" height="3.2"></rect>
-                <rect y='6.4' class="'st0" width="'16" height="3.2"></rect>
-                <rect y="12.8" class="'st0" width="'16" height="3.2"></rect>
-            </button>
+        <div class="navbar">
+            <button class='navButton' onclick="scrollToElement('aboutMe')">About Me</button>
+            <button class='navButton' onclick="scrollToElement('projects')">Projects</button>
+            <a href="https://github.com/pkingGMU?tab=repositories" class = "navButton" target="_blank">GitHub</a> 
+            <a href="https://www.linkedin.com/in/patrick-king-152193184/" class = "navButton" target="_blank">LinkedIn</a> 
         </div>
     </nav>
 
     <main>
         <!--Introduction-->
         <section>
-            <h1 id="aboutMe">About Me</h1>
+            <h1 class = 'aboutme' id="aboutMe">About Me</h1>
             <p>
                 My name is Patrick King and I am currently a Kinesiology and Exercise Science major at George Mason University. 
                 My passion for human movement and technology intertwine in my roles as an 
@@ -53,7 +53,7 @@
                 <li>Speech Recognition</li>
             </ul>
             <p>
-                Offline Transcription Description
+                TODO: Offline Transcription Description
             </p>
 
 
@@ -67,7 +67,7 @@
                 <li>GUI</li>
             </ul>
             <p>
-                Range of Motion Description
+                TODO: Range of Motion Description
             </p>
 
             

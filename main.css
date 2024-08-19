@@ -3,11 +3,81 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    background-color: #f6d4b1;
+    font-family: chill, sans-serif;
+    font-size: 18px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.navbar {
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0px;
+    z-index: 3;
+    justify-content: flex-start;
+    pointer-events: all;
+    flex-wrap: wrap;
+}
+
+
+
+.navButton {
+    float: left;
+    
+    font-family: chill, sans-serif;
+    font-size: 18px;
+    display: block;
+    gap: .25rem;
+    /*box-shadow: 6px 6px #52525240;*/
+    background-color: var(--color);
+    color: #d6cdb3;
+    cursor: pointer;
+    transition: all .3s;
+    padding: 4px 24px;
+    border: #d6cdb3 solid 1px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding:10px;
+        justify-content: center;
+    }
+
+    .navButton {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    main {
+        top: 50px;
+    }
+
+    
+}
+
+
+
+
+
+html[data-scroll=true] nav .navButton {
+    opacity: 1;
+    pointer-events: all;
+}
+
 main {
+    margin-top: 50px;
     color: var(--color);
     text-align: center;
     position: relative;
     z-index: 2;
+
 }
 
 p {
@@ -32,6 +102,11 @@ section:after {
     bottom: 0;
     transform:translate(-50%);
     width: clamp(0px, 95vw, 680px);
+}
+
+section #aboutMe {
+    
+    position: relative;
 }
 
 
@@ -73,6 +148,18 @@ hr {
     border-bottom: dashed 2px var(--color);
 }
 
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+
+
+ul {
+    list-style-type: disc;
+}
+
 
 :root {
     --color: #525252;
@@ -86,3 +173,22 @@ hr {
     margin: auto;
     box-sizing:  border-box;
 }
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    list-style-type: none;
+    transition: all .3s;
+}
+
+.skills li {
+    display: inline-block;
+    padding: 4px 8px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
