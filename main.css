@@ -5,10 +5,26 @@
 
 html, body {
     overflow-x: hidden;
-    background-color: #f6d4b1;
+    background-color: var(--bgColor);
     font-family: chill, sans-serif;
     font-size: 18px;
     -webkit-text-size-adjust: 100%;
+}
+
+a, button {
+    float: left;
+    font-family: chill, sans-serif;
+    font-size: 18px;
+    display: block;
+    gap: .25rem;
+    /*box-shadow: 6px 6px #52525240;*/
+    background-color: var(--boxColor);
+    color: var(--bgColor);
+    cursor: pointer;
+    transition: all .3s;
+    padding: 4px 24px;
+    border: var(--bgColor) solid 1px;
+    text-decoration: none;
 }
 
 .navbar {
@@ -25,23 +41,52 @@ html, body {
     flex-wrap: wrap;
 }
 
-
-
-.navButton {
-    float: left;
+.centerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+    padding: 1rem
+
+}
+
+.projectTitle {
+    font-size: 26px;
+    background-color: var(--boxColor);
+    color: var(--bgColor);
+}
+
+.projectButton {
+    float: none;
     font-family: chill, sans-serif;
     font-size: 18px;
     display: block;
     gap: .25rem;
-    /*box-shadow: 6px 6px #52525240;*/
-    background-color: var(--color);
-    color: #d6cdb3;
+    background-color: var(--repoColor);
+    color: var(--boxColor);
     cursor: pointer;
     transition: all .3s;
     padding: 4px 24px;
-    border: #d6cdb3 solid 1px;
+    border: var(--boxColor) solid 1px;
     text-decoration: none;
+    width:fit-content;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: clamp(0px, 95vw, 680px);
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.imgContainer img {
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -73,7 +118,7 @@ html[data-scroll=true] nav .navButton {
 
 main {
     margin-top: 50px;
-    color: var(--color);
+    color: var(--textColor);
     text-align: center;
     position: relative;
     z-index: 2;
@@ -87,6 +132,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+    color: var(--textColor)
 }
 
 section {
@@ -97,7 +143,7 @@ section {
 
 section:after {
     content: '';
-    border-bottom: dashed 2px var(--color);
+    border-bottom: dashed 2px var(--boxColor);
     position: absolute;
     bottom: 0;
     transform:translate(-50%);
@@ -112,7 +158,7 @@ section #aboutMe {
 
 body {
     overflow-x:hidden;
-    background-color: #d6cdb3;
+    background-color: var(--bgColor);
     font-family: chill, sans-serif;
     font-size: 18px;
     -webkit-text-size-adjust: 100%;
@@ -120,8 +166,8 @@ body {
 
 h1 {
     display: inline-block;
-    color: #d6cdb3;
-    background-color: var(--color);
+    color: var(--bgColor);
+    background-color: var(--boxColor);
     font-family: public-pixel, monospace;
     font-size: 2em;
     padding: 4px 16px 8px;
@@ -132,8 +178,8 @@ h2 {
     display: inline-block;
     font-size: 1.2em;
     text-align: center;
-    color: #d6cdb3;
-    background-color: var(--color);
+    color: var(--boxColor);
+    background-color: var(--bgColor);
     font-family: public-pixel, monospace;
     padding: 4px 16px 8px;
     margin: .3em auto;
@@ -145,13 +191,14 @@ hr {
     background-color: none;
     margin: 40px auto;
     border: none;
-    border-bottom: dashed 2px var(--color);
+    border-bottom: dashed 2px var(--boxColor);
 }
 
 li {
     display: list-item;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
+    color: var(--boxColor);
 }
 
 
@@ -161,9 +208,7 @@ ul {
 }
 
 
-:root {
-    --color: #525252;
-}
+
 
 .skills, p {
     padding: 16px;
@@ -192,3 +237,9 @@ ul {
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+:root {
+    --bgColor: #bc967f;
+    --boxColor: #1f1215;
+    --repoColor: #f6f2ef;
+   
+}
