@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css?ver0.0.2">
+    <link rel="stylesheet" href="main.css?ver0.0.3">
     <script src="main.js"></script>
     <title>Patrick King's Portfolio</title>
 </head>
@@ -70,8 +70,8 @@
 
             <!--Insert img in images folder-->
             <div class = 'imgContainer'>
-                <img src="img/Poster.png" alt="Offline Transcription Poster" class="projectImage">
-                <img src="img/transcription.png" alt="Transcription" class="projectImage">
+                <img src="img/Poster.png" alt="Offline Transcription Poster" class="projectImage" onclick="zoomImage(this)">
+                <img src="img/transcription.png" alt="Transcription" class="projectImage" onclick="zoomImage(this)">
             </div>
             
             <hr>
@@ -96,6 +96,11 @@
                 therapists. I created a markerless motion capture system that could calculate an individual's Range 
                 of Motion (ROM) after capturing two different frames using a webcam.
             </p>
+
+            <div class = 'imgContainer'>
+                <img src="img/ROMxls.png" alt="Offline Transcription Poster" id="img3" class="projectImage" onclick="zoomImage(this)">
+                <img src="img/2024-08-21 10-13-13 (online-video-cutter.com).gif" id="img4" alt="ROM" class="projectImage" onclick="zoomImage(this)">
+            </div>
 
             <hr>
 

@@ -86,7 +86,40 @@ a, button {
 .imgContainer img {
     width: 45%;
     height: 45%;
-    object-fit: cover;
+    
+}
+
+.imgContainer img:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+    filter: brightness(.8);
+    cursor: zoom-in;
+}
+
+.fullsize {
+    border: 4px solid var(--boxColor);
+    width: 90vw;
+    height: 90vh; 
+    z-index: 4;
+    cursor: zoom-out;
+    display: block;
+    position: fixed;
+    left: 100px;
+    top: 30px;
+
+    
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.fullsize img:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+    filter: brightness(.8);
+    cursor: zoom-out;
 }
 
 @media (max-width: 768px) {
