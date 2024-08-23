@@ -63,11 +63,11 @@ a, button {
     display: block;
     gap: .25rem;
     background-color: var(--repoColor);
-    color: var(--boxColor);
+    color: var(--repoText);
     cursor: pointer;
     transition: all .3s;
     padding: 4px 24px;
-    border: var(--boxColor) solid 1px;
+    border: var(--repoText) solid 1px;
     text-decoration: none;
     width:fit-content;
 }
@@ -231,7 +231,7 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
-    color: var(--boxColor);
+    color: var(--boxShadowText);
 }
 
 
@@ -267,12 +267,17 @@ ul {
 .skills li {
     display: inline-block;
     padding: 4px 8px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 1px var(--boxShadow);
 }
 
 :root {
-    --bgColor: #bc967f;
-    --boxColor: #1f1215;
+    --bgColor: black;
+    --boxColor: #006633;
     --repoColor: #f6f2ef;
+    --textColor: white;
+    --boxShadow: #ECB23A;
+    --repoText: #006633;
+    --boxShadowText: #ECB23A;
+
    
 }
