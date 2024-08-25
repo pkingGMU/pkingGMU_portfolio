@@ -1,10 +1,7 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    margin-top: 30px;
 }
 
 html, body {
@@ -15,22 +12,11 @@ html, body {
     -webkit-text-size-adjust: 100%;
 }
 
-a, button {
-    float: left;
-    font-family: chill, sans-serif;
-    font-size: 18px;
-    display: block;
-    gap: .25rem;
-    /*box-shadow: 6px 6px #52525240;*/
-    background-color: var(--boxColor);
-    color: var(--bgColor);
-    cursor: pointer;
-    transition: all .3s;
-    padding: 4px 24px;
-    border: var(--bgColor) solid 1px;
-    text-decoration: none;
+body {
+    margin-top: 30px;
 }
 
+/* Layout */
 .navbar {
     background-color: var(--boxColor);
     position: fixed;
@@ -39,11 +25,11 @@ a, button {
     left: 0;
     right: 0;
     display: flex;
-    gap: 0px;
+    gap: 0;
     z-index: 3;
     justify-content: space-between;
-    pointer-events: all;
     flex-wrap: wrap;
+    pointer-events: all;
 }
 
 .navbar-left {
@@ -58,35 +44,34 @@ a, button {
     margin-left: auto;
 }
 
-.centerButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    padding: 1rem
-
+main {
+    margin-top: 50px;
+    color: var(--textColor);
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-.projectTitle {
-    font-size: 26px;
-    background-color: var(--boxColor);
-    color: var(--bgColor);
-}
-
-.projectButton {
-    float: none;
+/* Components */
+a, button {
     font-family: chill, sans-serif;
     font-size: 18px;
     display: block;
     gap: .25rem;
-    background-color: var(--repoColor);
-    color: var(--repoText);
+    background-color: var(--boxColor);
+    color: var(--bgColor);
     cursor: pointer;
     transition: all .3s;
     padding: 4px 24px;
-    border: var(--repoText) solid 1px;
+    border: 1px solid var(--bgColor);
     text-decoration: none;
-    width:fit-content;
+    float: left;
+}
+
+.projectButton {
+    background-color: var(--repoColor);
+    color: var(--repoText);
+    border: 1px solid var(--repoText);
 }
 
 .imgContainer {
@@ -97,24 +82,22 @@ a, button {
     width: clamp(0px, 95vw, 680px);
     margin: auto;
     overflow: hidden;
-    
 }
 
 .imgContainer img {
     width: 45%;
-    height: 45%;
-    
+    height: auto;
+    transition: all .3s;
 }
 
 .imgContainer img:hover {
     transform: scale(1.1);
-    transition: all .3s;
     filter: brightness(.8);
     cursor: zoom-in;
 }
 
 .fullsize {
-    position:fixed;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -127,7 +110,7 @@ a, button {
     cursor: zoom-out;
 }
 
-img.projectImage.fullsize{
+.fullsize img {
     max-width: 100vw;
     max-height: 100vh;
     width: 80%;
@@ -140,88 +123,7 @@ img.projectImage.fullsize{
     opacity: .5;
 }
 
-.fullsize img:hover {
-    transform: scale(1.1);
-    transition: all .3s;
-    filter: brightness(.8);
-    cursor: zoom-out;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding:10px;
-        justify-content: center;
-    }
-
-    .navButton {
-        padding: 8px 16px;
-        font-size: 16px;
-    }
-
-    main {
-        top: 50px;
-    }
-
-    
-}
-
-
-
-
-
-html[data-scroll=true] nav .navButton {
-    opacity: 1;
-    pointer-events: all;
-}
-
-main {
-    margin-top: 50px;
-    color: var(--textColor);
-    text-align: center;
-    position: relative;
-    z-index: 2;
-
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    color: var(--textColor)
-}
-
-section {
-    padding-bottom: 64px;
-    margin-bottom: 80px;
-    position: relative;
-}
-
-section:after {
-    content: '';
-    border-bottom: dashed 2px var(--boxColor);
-    position: absolute;
-    bottom: 0;
-    transform:translate(-50%);
-    width: clamp(0px, 95vw, 680px);
-}
-
-section #aboutMe {
-    
-    position: relative;
-}
-
-
-body {
-    overflow-x:hidden;
-    background-color: var(--bgColor);
-    font-family: chill, sans-serif;
-    font-size: 18px;
-    -webkit-text-size-adjust: 100%;
-}
-
+/* Typography */
 h1 {
     display: inline-block;
     color: var(--bgColor);
@@ -243,6 +145,30 @@ h2 {
     margin: .3em auto;
 }
 
+p {
+    display: block;
+    margin-block: 1em;
+    color: var(--textColor);
+    line-height: 1.5;
+    text-align: left;
+    width: clamp(0px, 95vw, 680px);
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding: 16px;
+    text-align: left;
+    width: clamp(0px, 95vw, 680px);
+    margin: auto;
+}
+
+li {
+    color: var(--boxShadowText);
+}
+
 hr {
     width: 100px;
     height: 2px;
@@ -252,29 +178,31 @@ hr {
     border-bottom: dashed 2px var(--boxColor);
 }
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
-    color: var(--boxShadowText);
+/* Sections */
+/* Sections */
+section {
+    padding-bottom: 64px;
+    margin-bottom: 80px;
+    position: relative;
 }
 
-
-
-ul {
-    list-style-type: disc;
-}
-
-
-
-
-.skills, p {
-    padding: 16px;
-    text-align: left;
-    line-height: 1.5;
+section:after {
+    content: '';
+    border-bottom: dashed 2px var(--boxColor);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: clamp(0px, 95vw, 680px);
-    margin: auto;
-    box-sizing:  border-box;
+}
+
+
+/* Utility Classes */
+.centerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .skills {
@@ -282,10 +210,10 @@ ul {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center;
     gap: 16px;
     text-align: center;
     list-style-type: none;
+    padding: 16px;
     transition: all .3s;
 }
 
@@ -295,6 +223,24 @@ ul {
     box-shadow: 1px 1px 2px 1px var(--boxShadow);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .navButton {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    main {
+        top: 50px;
+    }
+}
+
+/* CSS Variables */
 :root {
     --bgColor: black;
     --boxColor: #006633;
@@ -303,6 +249,4 @@ ul {
     --boxShadow: #ECB23A;
     --repoText: #006633;
     --boxShadowText: #ECB23A;
-
-   
 }
