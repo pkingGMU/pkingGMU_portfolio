@@ -10,10 +10,16 @@
 <body>
     <nav>
         <div class="navbar">
-            <button class='navButton' onclick="scrollToElement('aboutMe')">About Me</button>
-            <button class='navButton' onclick="scrollToElement('projects')">Projects</button>
-            <a href="https://github.com/pkingGMU?tab=repositories" class = "navButton" target="_blank">GitHub</a> 
-            <a href="https://www.linkedin.com/in/patrick-king-152193184/" class = "navButton" target="_blank">LinkedIn</a> 
+            <div class ='navbar-left'>
+                
+                <button class='navButton' onclick="scrollToElement('aboutMe')">About Me</button>
+                <button class='navButton' onclick="scrollToElement('projects')">Projects</button>
+                <a href="https://github.com/pkingGMU?tab=repositories" class = "navButton" target="_blank">GitHub</a> 
+                <a href="https://www.linkedin.com/in/patrick-king-152193184/" class = "navButton" target="_blank">LinkedIn</a> 
+            </div>
+            <div class = 'navbar-right'>
+                <button class = 'login-button' onclick='login()'>Login</button>
+            </div>
         </div>
     </nav>
 
