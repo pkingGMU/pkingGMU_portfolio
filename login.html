@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href = 'login.css?ver0.0.1'>
+    <link rel="stylesheet" href="main.css?ver0.0.3">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="main.js"></script>
+
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class ='navbar-left'>
+                
+                <button class='navButton' onclick="scrollToElement('aboutMe')">About Me</button>
+                <button class='navButton' onclick="scrollToElement('projects')">Projects</button>
+                <a href="https://github.com/pkingGMU?tab=repositories" class = "navButton" target="_blank">GitHub</a> 
+                <a href="https://www.linkedin.com/in/patrick-king-152193184/" class = "navButton" target="_blank">LinkedIn</a> 
+            </div>
+            <div class = 'navbar-right'>
+                <button class = 'login-button' onclick='login()'>Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class = 'main-login'>
+        <dev class = 'login-div'>
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <i class='bx bxs-user' ></i>
+                    <input type='text' placeholder="Username" required>
+                </div>
+
+                
+
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type='text' placeholder="Password" required>
+                </div>
+
+                
+                <div class="button-group">
+
+                    <div class="remember-me">
+                        <label for="myCheckbox">Remember Me</label>
+                        <input type="checkbox" id="myCheckbox">
+                    </div>
+
+                    <button type='submit' class="login-btn">Login</button>
+
+                    <div class="register-link">
+                        <p>Don't have an account? </p>
+                        <a href="#">Register</a>
+                    </div>
+                </div>
+
+            </form>
+        </dev>
+    </main>
+    
+</body>
+</html>
