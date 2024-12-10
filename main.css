@@ -4,18 +4,40 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'retro_gamingregular';
+    src: url('retro_gaming-webfont.woff2') format('woff2'),
+         url('retro_gaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
     overflow-x: hidden;
     background-color: var(--bgColor);
-    font-family: chill, sans-serif;
-    font-size: 18px;
-    -webkit-text-size-adjust: 100%;
-    height: 100%;
+    font: 16px 'retro_gamingregular', sans-serif;
 }
 
 body {
     margin-top: 30px;
 }
+
+button {
+    font: 18px 'retro_gamingregular', sans-serif;
+    font-size: 18px;
+    display: block;
+    gap: .25rem;
+    background-color: var(--boxColor);
+    color: var(--bgColor);
+    cursor: pointer;
+    transition: all .3s;
+    padding: 4px 24px;
+    border: 1px solid var(--bgColor);
+    text-decoration: none;
+}
+
+
 
 /* Layout */
 .navbar {
@@ -121,7 +143,6 @@ main {
 }
 
 a, button {
-    font-family: chill, sans-serif;
     font-size: 18px;
     display: block;
     gap: .25rem;
@@ -197,7 +218,7 @@ h1 {
     display: inline-block;
     color: var(--bgColor);
     background-color: var(--boxColor);
-    font-family: public-pixel, monospace;
+   
     font-size: 2em;
     padding: 4px 16px 8px;
     margin: 0 auto .3em;
@@ -209,7 +230,7 @@ h2 {
     text-align: center;
     color: var(--bgColor);
     background-color: var(--boxColor);
-    font-family: public-pixel, monospace;
+    
     padding: 4px 16px 8px;
     margin: .3em auto;
 }
